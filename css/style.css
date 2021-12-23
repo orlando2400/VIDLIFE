@@ -1,0 +1,332 @@
+html{
+    margin: 0;
+    padding: 0;
+
+}
+body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, section, menu, details {
+    margin: auto;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    max-width: 100%;
+}
+.contenedor-cabezera{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+}
+.titulo{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.contenedor-cabezera a{
+    font-family: 'Yeseva One';
+    color: black;
+    text-decoration: none;
+    font-size: 36px;
+}
+.contenedor-cabezera span{
+    color: #159EEC;
+}
+.box-container{
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.box-container .box{
+    margin-left: 50px;
+    display: flex;
+}
+.box img{
+    margin-right: 10px;
+}
+.contenedor-menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    background-color: #1F2B6C;
+    text-align: center;
+}
+.nav-var{
+    display: flex;
+}
+.nav-var ul{
+    
+    display: flex;
+    
+}
+.nav-var li{
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 50px;
+    font-size: 18px;
+    list-style: none;
+}
+.nav-var a{
+    text-decoration: none;
+    color: white;
+}
+.nav-var a:hover{
+    color: rgb(126, 126, 138);
+}
+.contenedor-menu button{
+    cursor: pointer;
+    border-radius: 30px;
+    border: 0px;
+    width: 188px;
+    height: 35px;
+    background-color:#BFD2F8;
+}
+.contenedor-menu button a{
+    text-decoration: none;
+    color: #1F2B6C;
+    font-size: 18px;
+}
+.presentacion{
+  display: flex;
+
+}
+#fondo{
+    width: 100vw;
+    height: 628px;
+    background-image: url(../img/Fotoindex.png);
+    
+}
+#fondo h1{
+    color: #159EEC;
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    margin-top: 12%;
+    margin-left: 6.5%;
+}
+#fondo p{
+    color: #1F2B6C;
+    font-size: 48px;
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    margin-left: 6%;
+}
+.descripcion{
+    max-width: 100vw;
+    padding: 50px 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.texto h1{
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 100px;
+    margin-left: 70px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #159EEC;
+}
+.texto h2{
+    font-family: 'Yeseva One';
+    margin-left: 70px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #1F2B6C;
+}
+.texto p{
+    font-family: 'Work Sans', sans-serif;
+    width: 583.14px;
+    margin-left: 70px;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 100;
+    color: black;
+    text-align: center;
+}
+.mision{
+    width: 100vw;
+    text-align: center;
+}
+.mision p{
+    font-family:'Work Sans', sans-serif;
+    font-size: 24px;
+    margin: 10px 30%;
+    color: black;
+}
+.mision hr{
+    width: 10vw;
+}
+.contenedor-cita{
+    margin-bottom: 5%;
+    width: 100vw;
+    
+}
+.contenedor-cita .foto{
+
+    display: flex;
+}
+
+.contenedor-cita form{
+    max-width: 700px;
+}
+.contenedor-cita table{
+    background-color: white;
+    width: 100%;
+}
+.contenedor-cita table tr{
+    border: 5px solid white;
+    background-color: #1F2B6C;
+    
+}
+.contenedor-cita input{
+    background-color: #1F2B6C;
+    color: white;
+    width: 98%;
+    border: 0px groove white;
+    font-family:'Work Sans', sans-serif;
+    font-size: 14px;
+    line-height: 35px;
+    
+}
+.contenedor-cita ::placeholder{
+    color: white;
+}
+#calendario{
+    color: white;
+}
+.contenedor-cita .reserva{
+    border-style: none;
+    width: 100%;
+    background-color: #BFD2F8;
+    color: black;
+    line-height: 35px;
+    cursor: pointer;
+}
+.nav__link{
+    color: #FFF;
+    display: flex;
+    padding: 3px 3px;
+    text-decoration: none;
+    cursor: default;
+    max-width: 100%;
+    margin-left: initial;
+    margin-bottom: 0px;
+    
+}
+
+.nav__link--inside{
+    border-radius: 6px ;
+    line-height: 5px;
+    background-color: #1F2B6C;
+    
+}
+
+.nav__link--inside:hover{
+    background: #F6F8FA;
+    color: black;
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    cursor:default;
+    
+}
+
+.list__button{
+    display: flex;
+    
+}
+.list__button a{
+    font-family:'Work Sans', sans-serif;
+    font-size: 14px;
+}
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+.list__arrow{
+    margin-left: auto;
+    margin-top: 4%;
+    transition: transform .3s;
+    background-color: white;
+    cursor: pointer; 
+}
+.list__show{
+    width: 80%;
+    margin-left: initial;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+    font-family:'Work Sans', sans-serif;
+    font-size: 14px;
+}
+.contenedor-footer{
+    display: flex;
+    background-color: #1F2B6C;
+    max-width: 100vw;
+    padding-top: 50px;
+    justify-content: space-evenly;
+}
+.contenedor-footer h1 a{
+    text-decoration: none;
+    color: #BFD2F8;
+    font-size: 36px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+}
+.contenedor-footer h1 p{
+    font-family:'Work Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FCFEFE;
+}
+.contenedor-footer .enlaces h1{
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FCFEFE;
+}
+
+.contenedor-footer  li{
+    list-style: none;
+    font-family:'Work Sans', sans-serif;
+    color: #FCFEFE;
+    font-weight: 400;
+}
+.contenedor-footer .enlaces a{
+    text-decoration: none;
+    color: #FCFEFE;
+}
+.contenedor-footer .contactanos{
+    margin-left: 120px;
+}
+.contenedor-footer .contactanos h1{
+    font-family:'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FCFEFE;
+}
+.container-copyright{
+
+    color:#FCFEFE;
+    max-width: 100vw;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #1F2B6C;
+}
+.container-copyright .copyright {
+
+    padding: 30px 0px 0px 150px;
+}
