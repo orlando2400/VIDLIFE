@@ -10,6 +10,7 @@
     <title>VIDLIFE</title>
 </head>
 <body>
+    <script type = "text/javascript" src="../js/doctores.js"></script> 
     <div class="contenedor-cabezera">
         <div class="titulo">
             <a href="../index.html">VID<span>LIFE</span></a>
@@ -47,79 +48,41 @@
         <form >
             <table>
                 <tr>
-                    <th><input type="number" id="dni" name="dni" placeholder="Ingrese su DNI"></th><th><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></th>
+                    <th><input type="number" id="codigo" name="codigo" placeholder="Ingrese su código"></th><th><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></th>
                 </tr>
                 <tr>
                     <th>
-                        <li class="list__item">
-                            <div class="list__button list__button--click">
-                                <a class="nav__link">Especialidad</a>
-                                <img src="../img/arrow.svg" class="list__arrow">
-                            </div>
-            
-                            <ul class="list__show">
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Especialidad 1</p>
-                                </li>
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Especialidad 2</p>
-                                </li>
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Especialidad 3</p>
-                                </li>
-                            </ul>
-                        </li>
+                        <select name="enfermedad" id="enfermedad" onchange="change(this.id, 'doctores')"
+                         value="<%= typeof enfermedad != 'undefined' ?enfermedad : '' %>">
+                         <option>Seleccione enfermedad</option>
+                         <option value="Enfermedad 1">Enfermedad 1</option>
+                         <option value="Enfermedad 2">Enfermedad 2</option>
+                         <option value="Enfermedad 3">Enfermedad 3</option>
+                        </select>              
                     </th>
                     <th>
-                        <li class="list__item">
-                            <div class="list__button list__button--click">
-                                <a class="nav__link">Doctor</a>
-                                <img src="../img/arrow.svg" class="list__arrow">
-                            </div>
-            
-                            <ul class="list__show">
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Doctor 1</p>
-                                </li>
-            
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Doctor 2</p>
-                                </li>
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Doctor 3</p>
-                                </li>
-                            </ul>
-                        </li>
+                        <select id="doctores" name="doctores" value="<%= typeof doctores != 'undefined' ? doctores : '' %>" > 
+                        <option>Seleccione doctor</option>
+                        </select>
                     </th>
                 </tr>
                 <tr>
+                    
                     <th><input type="date" id="calendario" name="calendario" value="2021-12-29" min="2021-01-01" max="2022-12-31" ></th>
                     <th>
-                        <li class="list__item">
-                            <div class="list__button list__button--click">
-                                <a class="nav__link">Turno</a>
-                                <img src="../img/arrow.svg" class="list__arrow">
-                            </div>
-            
-                            <ul class="list__show">
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Turno 1</p>
-                                </li>
-            
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Turno 2</p>
-                                </li>
-                                <li class="list__inside">
-                                    <p class="nav__link nav__link--inside">Turno 3</p>
-                                </li>
-                            </ul>
-                        </li>
+                        <select id="turno" name="turno"> 
+                        <option>Seleccione turno</option>
+                        <option value="Mañana">Mañana</option>
+                         <option value="Tarde">Tarde</option>
+                         <option value="Noche">Noche</option>
+                        </select>
                     </th>
                 </tr>
             </table>
             <button class="reserva">Reservar cita</button> 
         </form>
     </div>
+
     <footer>
         <div class="contenedor-footer">
             <div class="titulo">
