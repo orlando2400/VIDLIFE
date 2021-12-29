@@ -213,7 +213,6 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     
 }
 .contenedor-cita .foto{
-
     display: flex;
 }
 
@@ -258,9 +257,11 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     border-style: none;
     width: 100%;
     background-color: #BFD2F8;
-    color: black;
+    color: grey;
     line-height: 35px;
     cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
 }
 .nav__link{
     color: #FFF;
@@ -456,4 +457,64 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     
         padding: 2px 0px 0px 0px;
     }
+}
+
+/*Habitaciones*/
+
+
+.contenedor-habitaciones form{
+    max-width: 700px;
+    margin-bottom: 5%;
+}
+
+.contenedor-habitaciones table{
+    background-color: #FFF;
+    width: 100%;
+}
+
+.contenedor-habitaciones table tr{
+    border: 5px solid white;
+    background-color: #1F2B6C;
+}
+
+.contenedor-habitaciones table select{
+    color: white;
+    height: 30px;
+    width: 100%;
+    background-color: #1F2B6C;
+    font-family:'Work Sans', sans-serif;
+    font-size: 16px;
+    border: none;
+}
+.contenedor-habitaciones input{
+    background-color: #1F2B6C;
+    color: white;
+    width: 98%;
+    border: 0px groove white;
+    font-family:'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 37px; 
+}
+.contenedor-habitaciones label{
+    background-color: #1F2B6C;
+    color: white;
+    width: 98%;
+    border: 0px groove white;
+    font-family:'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 37px; 
+}
+
+.contenedor-habitaciones .internar{
+    border-style: none;
+    width: 100%;
+    background-color: #BFD2F8;
+    color: grey;
+    line-height: 35px;
+    cursor: pointer;
+    font-family:'Work Sans', sans-serif;
+    font-size: 18px;
+}
+.contenedor-habitaciones .foto{
+    display: flex;
 }

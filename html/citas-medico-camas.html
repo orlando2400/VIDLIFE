@@ -43,80 +43,75 @@
     </div>
 
     <div class="contenedor-habitaciones">
-        <div class="contenedor-citas-form">
-            <form action="../php/citas-medico-camas.php" method="POST">
-                <table>
-                    <tr class="contenedor-citas-form-fecha">
-                        <th><label for="fecha">Fecha de internamiento</label></th>
-                        <th><input type="date" name="fecha" id="fecha"></th>
-                    </tr>
-                    <tr class="contenedor-citas-form-hora">
-                        <th><label for="hora">Hora de internamiento</label></th>
-                        <th><input type="time" name="hora" id="hora"></th>
-                    </tr>
+        <div class="foto">
+            <img src="../img/FotoNosotros.png" alt="Foto-citas">
+    </div>
+        <form>
+            <table>
+                <tr>
+                    <th><label for="fecha">Fecha de internamiento</label></th>
+                    <th><input type="date" name="fecha" id="fecha"></th>
+                </tr>
+                <tr>
+                    <th><label for="hora">Hora de internamiento</label></th>
+                    <th><input type="time" name="hora" id="hora"></th>
+                </tr>
 
-                    <tr class="contenedor-citas-form-Habitacion">
-                        <th><label for="Habitacion">Numero de habitacion</label></th>
-                        <th><select name="Habitacion" id="Habitacion">
-                                <option value="Habitacion1">Habitacion 1</option>
-                                <option value="Habitacion2">Habitacion 2</option>
-                                <option value="Habitacion3">Habitacion 3</option>
-                                <option value="Habitacion4">Habitacion 4</option>
-                                <option value="Habitacion5">Habitacion 5</option>
-                                <option value="Habitacion6">Habitacion 6</option>
-                                <option value="Habitacion7">Habitacion 7</option>
-                                <option value="Habitacion8">Habitacion 8</option>
-                                <option value="Habitacion9">Habitacion 9</option>
-                            </select></th>
-                    </tr>
+                <tr >
+                    <th><label for="Habitacion">Numero de habitacion</label></th>
+                    <th><select name="Habitacion" id="Habitacion">
+                            <option value="Habitacion1">Habitacion 1</option>
+                            <option value="Habitacion2">Habitacion 2</option>
+                            <option value="Habitacion3">Habitacion 3</option>
+                            <option value="Habitacion4">Habitacion 4</option>
+                            <option value="Habitacion5">Habitacion 5</option>
+                            <option value="Habitacion6">Habitacion 6</option>
+                        </select></th>
+                </tr>
 
-                    <tr class="contenedor-citas-form-asiento">
-                        <th><label for="asiento">Comentario de internamiento</label></th>
-                        <th><input type="text" name="asiento" id="asiento"></th>
-                    </tr>
+                <tr>
+                    <th><label for="asiento">Comentario de internamiento</label></th>
+                    <th><input type="text" name="asiento" id="asiento"></th>
+                </tr>
 
-                    <tr class="contenedor-citas-form-boton">
-                        <th><button type="submit">Internar</button></th>
-                    </tr>
+            </table>
+            <button class="internar">Internar</button>
+        </form>
 
-                </table>
-            </form>
-
-            <footer>
-                <div class="contenedor-footer">
-                    <div class="titulo">
-                        <h1><a href="index.html">VIDLIFE<br>
-                            </a>
-                            <p>Líderes en medicina a tu servicio</p>
-                        </h1>
-                    </div>
-
-                    <div class="enlaces">
-                        <h1>Enlaces importantes</h1>
-                        <ul>
-                            <li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="citas.html">Citas</a></li>
-                            <li><a href="">Especialidades</a></li>
-                        </ul>
-                    </div>
-                    <div class="contactanos">
-                        <h1>Contáctenos</h1>
-                        <ul>
-                            <li>Telefono: (051) 619700</li>
-                            <li>Email: contacto@vodlife.com</li>
-                            <li>Direccion: Av. Jorge Basadre</li>
-                        </ul>
-                    </div>
-
+        <footer>
+            <div class="contenedor-footer">
+                <div class="titulo">
+                    <h1><a href="index.html">VIDLIFE<br>
+                        </a>
+                        <p>Líderes en medicina a tu servicio</p>
+                    </h1>
                 </div>
-                <div class="container-copyright">
-                    <div class="copyright">
-                        <hr>
-                        © 2021 VidLife Todos los derechos reservados por UNMSM
-                    </div>
+
+                <div class="enlaces">
+                    <h1>Enlaces importantes</h1>
+                    <ul>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="citas.html">Citas</a></li>
+                        <li><a href="">Especialidades</a></li>
+                    </ul>
                 </div>
-            </footer>
-        </div>
+                <div class="contactanos">
+                    <h1>Contáctenos</h1>
+                    <ul>
+                        <li>Telefono: (051) 619700</li>
+                        <li>Email: contacto@vodlife.com</li>
+                        <li>Direccion: Av. Jorge Basadre</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="container-copyright">
+                <div class="copyright">
+                    <hr>
+                    © 2021 VidLife Todos los derechos reservados por UNMSM
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
