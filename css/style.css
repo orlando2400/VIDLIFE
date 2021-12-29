@@ -50,6 +50,10 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
 }
 .contenedor-menu{
     display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
