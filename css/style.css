@@ -496,7 +496,8 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
 
 .contenedor-habitaciones form{
     max-width: 700px;
-    margin-bottom: 5%;
+    margin-bottom: 12%;
+margin-top: 12%;
 }
 
 .contenedor-habitaciones table{
@@ -527,6 +528,7 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     font-size: 16px;
     line-height: 37px; 
 }
+
 .contenedor-habitaciones label{
     background-color: #1F2B6C;
     color: white;
