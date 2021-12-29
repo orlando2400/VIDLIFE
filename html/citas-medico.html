@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,30 +42,30 @@
         <button type="submit"><a href="iniciarsesion.html">Iniciar Sesión</a></button>
     </div>
     <div class="form-citas">
-        <table>
-            <tr>
-                <th><label for="n_cita">Número de cita</label></th>
-                <td id="n_cita" name="n_cita">xxxxxxxxxxxxxxx</td>
-            </tr>
-            <tr>
-                <th><label for="nombres_cita">Nombres</label></th>
-                <td id="nombres_cita" name="nombres_cita">xxxxxxxxxxxxxxx</td>
-            </tr>
-            <tr>
-                <th><label for="apellidos_cita">Apellidos</label></th>
-                <td id="apellidos_cita" name="apellidos_cita">xxxxxxxxxxxxxxx</td>
-            </tr>
-            <tr>
-                <th><label for="fecha_cita">Fecha</label></th>
-               <td id="fecha_cita" name="fecha_cita">xxxxxxxxxxxxxxx</td>
-            </tr>
-            <tr>
-                <td><textarea name="comentario" placeholder="Comentario ..."></textarea></td>
-            </tr>
-            <tr class="opciones">
-                <th><input type="button" id="hospitalizar" name="hospitalizar" value="Hospitalizar"></th><th><input type="button" id="finalizar" name="finalizar" value="Finalizar"></th>
-            </tr>
-        </table>
+        <form>
+            <table>
+                <input type="text" id="lista" name="lista" required="" placeholder="" style="display: none;" value =<%=lista %>
+                <tr>
+                    <th><label for="n_cita">Número de cita</label></th>
+                    <td id="n_cita" name="n_cita">xxxxxxxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <th><label for="nombres_cita">Nombres</label></th>
+                    <td id="nombres_cita" name="nombres_cita">xxxxxxxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <th><label for="apellidos_cita">Apellidos</label></th>
+                    <td id="apellidos_cita" name="apellidos_cita">xxxxxxxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <th><label for="fecha_cita">Fecha</label></th>
+                   <td id="fecha_cita" name="fecha_cita">xxxxxxxxxxxxxxx</td>
+                </tr>                  
+            </table>
+            <div class="opciones"> 
+                <button type="submit" class="hospitalizar">Hospitalizar</button>
+            </div>
+        </form>
     </div>
     <footer>
         <div class="contenedor-footer">
