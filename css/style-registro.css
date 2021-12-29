@@ -29,12 +29,18 @@
     line-height: 37px;
     
 }
+.contenedor-registro table select{
+    color: white;
+    font-family:'Work Sans', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 100%;
+    background-color: #1F2B6C;
+    border: none;
+}
 .contenedor-registro ::placeholder{
     color: white;
     
-}
-.contenedor-registro form table .plan{
-
 }
 .contenedor-registro .siguiente{
     border-style: none;
