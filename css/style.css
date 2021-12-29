@@ -231,7 +231,7 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     width: 100%;
     background-color: #1F2B6C;
     font-family:'Work Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
 }
 .contenedor-cita input{
@@ -240,8 +240,8 @@ body, span, object, iframe, h1, h2, h3, h4, h5, h6, h7 p, blockquote, pre, a, ab
     width: 98%;
     border: 0px groove white;
     font-family:'Work Sans', sans-serif;
-    font-size: 14px;
-    line-height: 35px;
+    font-size: 16px;
+    line-height: 37px;
     
 }
 .contenedor-cita ::placeholder{
