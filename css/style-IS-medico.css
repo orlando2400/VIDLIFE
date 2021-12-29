@@ -65,6 +65,7 @@
 }
 .form-citas textarea{
     width: 100%;
+    resize: none;
 }
 .form-citas .opciones{
     border: none;
