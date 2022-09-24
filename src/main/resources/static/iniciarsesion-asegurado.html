@@ -33,13 +33,14 @@
     <div class="contenedor-menu">
         <div class="nav-var">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Quienes Somos</a></li>
-                <li><a href="citas.html">Reserva cita</a></li>
-                <li><a href="#">Comprar seguro</a></li>
+                <li><a href="#">Especialidades</a></li>
+                <li><a href="#">Doctores</a></li>
             </ul>
         </div>
         <button type="submit"><a href="iniciarsesion.html">Iniciar Sesión</a></button>
+        <button type="submit"><a href="registro.html">Registrate</a></button>
     </div>
     <div class="contenedor-login">
         <div class="foto">
@@ -53,8 +54,11 @@
                 <tr>
                     <th><input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña"></th>
                 </tr>
+                <tr>
+                    <td class = "inicio" align='center' colspan="2"><a onclick="validarAsegurado()" href="#" type="submit" id= "login" class="login" name="login" value="login">INGRESAR</a></td>
+                </tr>  
             </table>
-            <button class="inicio">INICIAR</button> 
+            
         </form>
     </div>
     <footer>
