@@ -1,49 +1,169 @@
 package com.VIDLIFE.app.models;
 
 
-import lombok.EqualsAndHashCode;
+
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 
 @Entity
+@Data
 @Table(name = "asegurado")
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false, nullable = false)
-    @Getter @Setter
-    private long ID;
+    private int ID;
 
-    @Column(name = "nombres")
-    @Getter @Setter
+    @Column(name = "nombres", nullable = false)
+    @NotNull
+    @NotBlank
     private String nombres;
 
-    @Column(name = "apellidos")
-    @Getter @Setter
+    @Column(name = "apellidos", nullable = false)
+    @NotNull
+    @NotBlank
     private String apellidos;
 
-    @Column(name = "correo")
-    @Getter @Setter
+    @Column(name = "correo", nullable = false)
+    @NotNull
+    @NotBlank
+    @Email
     private String correo;
 
-    @Column(name = "telefono")
-    @Getter @Setter
-    private int telefono;
+    @Column(name = "telefono", nullable = false, length = 9)
+    @NotNull
+    private Integer telefono;
 
-    @Column(name = "dni")
-    @Getter @Setter
-    private int dni;
+    @Column(name = "dni", nullable = false, length = 8)
+    @NotNull
+    private Integer dni;
 
-    @Column(name = "direccion")
-    @Getter @Setter
+    @Column(name = "direccion", nullable = false)
+    @NotNull
+    @NotBlank
     private String direccion;
 
-    @Column(name = "password")
-    @Getter @Setter
+    @Column(name = "password", nullable = false)
+    @NotNull
+    @NotBlank
     private String password;
 
+	public Usuario() {
+		
+	}
+
+
+	public Usuario(int iD, @NotNull @NotBlank String nombres, @NotNull @NotBlank String apellidos,
+			@NotNull @NotBlank @Email String correo, @NotNull Integer telefono, @NotNull Integer dni,
+			@NotNull @NotBlank String direccion, @NotNull @NotBlank String password) {
+		super();
+		ID = iD;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.correo = correo;
+		this.telefono = telefono;
+		this.dni = dni;
+		this.direccion = direccion;
+		this.password = password;
+	}
+
+
+	public int getID() {
+		return ID;
+	}
+
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+
+	public String getNombres() {
+		return nombres;
+	}
+
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+
+	public String getCorreo() {
+		return correo;
+	}
+
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+
+	public Integer getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(Integer telefono) {
+		this.telefono = telefono;
+	}
+
+
+	public Integer getDni() {
+		return dni;
+	}
+
+
+	public void setDni(Integer dni) {
+		this.dni = dni;
+	}
+
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+    
+
+	
+    
+	        
 }

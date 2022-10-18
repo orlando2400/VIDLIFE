@@ -18,7 +18,7 @@ async function registrarAsegurado() {
    if(datos.nombres != "" && datos.apellidos != "" && datos.correo != "" && datos.telefono != "" && datos.dni != "" && datos.direccion != "" && datos.contrasena != "" && datos.contrasena2 != ""){
     if(datos.contrasena == repetirContrasena){
       window.location.replace("iniciarsesion.html");
-      alert("Sus datos fueron procesados con éxito!, proceda a pagar su seguro para terminar el registro en VIDLIFE");
+      alert("Sus datos fueron procesados con éxito!");
     }
     else{
       alert("Las contraseñas ingresadas son distintas. Tienen que ser iguales para seguir con el registro");
@@ -30,7 +30,7 @@ async function registrarAsegurado() {
         return;
    }
 
-  const request = await fetch('api/asegurado', {
+  const request = await fetch('/registrar', {
      method: 'POST',
      headers: {
        'Accept': 'application/json',

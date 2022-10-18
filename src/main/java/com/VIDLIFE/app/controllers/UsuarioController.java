@@ -1,34 +1,52 @@
 package com.VIDLIFE.app.controllers;
-import com.VIDLIFE.app.dao.UsuarioDao;
 import com.VIDLIFE.app.models.Usuario;
 import com.VIDLIFE.app.services.UsuarioService;
+
+import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.awt.PageAttributes.MediaType;
+
+import javax.validation.Valid;
 
 @RestController
-
 public class UsuarioController {
-
+	
+    
+    private final UsuarioService usuarioService;
+    
     @Autowired
-    private UsuarioService usuarioService;
+    public UsuarioController(UsuarioService usuarioService) {
+		this.usuarioService = usuarioService;
+	}
 
-    /* @RequestMapping(value = "api/asegurado" ,method = RequestMethod.GET)
+
+	/* @RequestMapping(value = "api/asegurado" ,method = RequestMethod.GET)
     public List<Usuario> getUsuarios(){
 
     }*/
-
-    @RequestMapping(value = "api/asegurado" ,method = RequestMethod.POST)
-
-    public void registrar(@RequestBody Usuario usuario){
-
-        usuarioService.registrar(usuario);
+    @PostMapping(value = "/registrar")
+    public ResponseEntity<String> registrar(@Valid @RequestBody Usuario usuario,BindingResult result){
+    	
+    	Usuario user = new Usuario(); 
+    	user.setNombres(usuario.getNombres());
+    	user.setApellidos(usuario.getApellidos());
+    	user.setCorreo(usuario.getCorreo());
+    	user.setTelefono(usuario.getTelefono());
+    	user.setDni(usuario.getDni());
+    	user.setDireccion(usuario.getDireccion());
+    	user.setPassword(usuario.getPassword());
+    	
+    	 	
+        this.usuarioService.registrar(usuario);
+        return new ResponseEntity<>(("Usuario creado"),HttpStatus.OK);
     }
 
 }

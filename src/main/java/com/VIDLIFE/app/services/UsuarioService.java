@@ -13,6 +13,7 @@ public class UsuarioService {
     private UsuarioDao usuarioDao;
 
     public void registrar(@RequestBody Usuario usuario){
+    	
         usuarioDao.registrar(usuario);
     }
 }
