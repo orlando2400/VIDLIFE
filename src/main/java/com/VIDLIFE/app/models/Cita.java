@@ -1,12 +1,13 @@
 package com.VIDLIFE.app.models;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Future;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -17,16 +18,21 @@ public class Cita {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private long id;
+    @Column(name = "codigo", nullable = false)
     private int codigo;
+    @Column(name = "apellido", nullable = false)
     private String apellido;
+    @Future
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date fechaCita;
+    @Column(name = "turno", nullable = false)
+    private String turno;
     @ManyToOne
-    @JoinColumn(name = "fk_especialidad", nullable = false)
-    private Especialidad especialidad;
+    @JoinColumn(name = "fk_usuario", nullable = false)
+    private Usuario usuario;
     @ManyToOne
     @JoinColumn(name = "fk_doctor", nullable = false)
     private Doctor doctor;
-    @Future
-    private Date fechaCita;
-
 }

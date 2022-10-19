@@ -3,20 +3,13 @@ package com.VIDLIFE.app.models;
 
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import java.util.List;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Data
@@ -61,7 +54,10 @@ public class Usuario {
     @NotNull
     @NotBlank
     private String password;
-
+    
+    @OneToMany(mappedBy = "usuario")
+    private List<Cita> citas;
+    
 	public Usuario() {
 		
 	}

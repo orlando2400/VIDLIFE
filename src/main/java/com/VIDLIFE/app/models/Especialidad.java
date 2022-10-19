@@ -9,13 +9,16 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "especialidades")
+@Table(name = "especialidad")
 public class Especialidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "id")
+    private int id;
+    @Column(name = "nombre")
     private String nombre;
-    @OneToMany(mappedBy = "especialidad")
-    private List<Cita> citas ;
+    @ManyToOne
+    @JoinColumn(name = "fk_doctor", nullable = false)
+    private Doctor doctor;
 }
