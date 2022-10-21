@@ -10,7 +10,11 @@ public class CitaController {
 
     @Autowired
     private CitaService citaService;
-
+    
+    @GetMapping("/traerDoctor")
+    public void traerDoctor() {
+    	citaService.
+    }
     @RequestMapping(value = "/cita",method = RequestMethod.POST)
     public void registrar(@RequestBody Cita cita){
         citaService.reservar(cita);

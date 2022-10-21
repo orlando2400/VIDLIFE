@@ -2,6 +2,20 @@ $(document).ready(function() {
     // on ready
  });
  
+ async function traerCombobox() {
+  
+  const request = await fetch('api/cita', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datos)
+  });
+  alert("La cita fue reservada con éxito!");
+  window.location.href = 'cita.html'
+
+}
  
  async function registrarCita() {
    let datos = {};

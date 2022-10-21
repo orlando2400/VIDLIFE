@@ -1,19 +1,13 @@
 package com.VIDLIFE.app.controllers;
 import com.VIDLIFE.app.models.Usuario;
 import com.VIDLIFE.app.services.UsuarioService;
-
-import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.awt.PageAttributes.MediaType;
-
 import javax.validation.Valid;
 
 @RestController

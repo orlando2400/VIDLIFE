@@ -18,7 +18,4 @@ public class Especialidad {
     private int id;
     @Column(name = "nombre")
     private String nombre;
-    @ManyToOne
-    @JoinColumn(name = "fk_doctor", nullable = false)
-    private Doctor doctor;
 }

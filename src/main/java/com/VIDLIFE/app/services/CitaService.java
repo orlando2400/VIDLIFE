@@ -13,7 +13,11 @@ import javax.transaction.Transactional;
 public class CitaService {
     @Autowired
     private CitaDao citaDao;
-
+    
+    public void traerDoctores() {
+    	citaDao.
+    }
+    
     public void reservar(@RequestBody Cita cita){
         citaDao.reservar(cita);
     }

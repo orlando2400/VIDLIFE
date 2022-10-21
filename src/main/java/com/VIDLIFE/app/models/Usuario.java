@@ -1,9 +1,4 @@
 package com.VIDLIFE.app.models;
-
-
-
-import lombok.Data;
-
 import java.util.List;
 
 import javax.persistence.*;
@@ -12,8 +7,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Data
-@Table(name = "asegurado")
+@Table(name = "usuario")
 public class Usuario {
 
     @Id
