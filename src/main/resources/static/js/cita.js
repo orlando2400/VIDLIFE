@@ -1,8 +1,28 @@
 $(document).ready(function() {
-    // on ready
+  listaEspecialidad();
+  $('#citas').DataTable();
  });
+
+ async function listaEspecialidad() {
+  
+  const request = await fetch('api/especialidades', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+  const especialidades = await request.json();
+  let listadoEspecialidad ='';
+  for (let especialidad of especialidades) {
+    let especialidadHtml = '<option value="' + especialidad.id + '">' + especialidad.nombre + '</option>';
+    listadoEspecialidad += especialidadHtml;
+  }
+  document.querySelector('#comboboxEspecialidad').outerHTML = listadoEspecialidad;
+  //$('#comboboxEspecialidad').append(s);
+}
  
- async function traerCombobox() {
+ /*async function listaDoctor() {
   
   const request = await fetch('api/cita', {
     method: 'GET',
@@ -15,8 +35,8 @@ $(document).ready(function() {
   alert("La cita fue reservada con éxito!");
   window.location.href = 'cita.html'
 
-}
- 
+}*/
+
  async function registrarCita() {
    let datos = {};
    datos.codigo = document.getElementById('codigo').value;
@@ -26,7 +46,7 @@ $(document).ready(function() {
    datos.calendario = document.getElementById('calendario').value;
    datos.turno = document.getElementById('turno').value;
  
-   const request = await fetch('api/cita', {
+   const request = await fetch('api/cita/registrar', {
      method: 'POST',
      headers: {
        'Accept': 'application/json',

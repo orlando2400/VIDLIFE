@@ -26,7 +26,7 @@ public class UsuarioController {
     public List<Usuario> getUsuarios(){
 
     }*/
-    @PostMapping(value = "/registrar")
+    @PostMapping(value = "api/usuario/registrar")
     public ResponseEntity<String> registrar(@Valid @RequestBody Usuario usuario,BindingResult result){
     	
     	Usuario user = new Usuario(); 

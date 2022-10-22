@@ -54,18 +54,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <select name="enfermedad" id="enfermedad" onchange="change(this.id, 'doctores')"
-                         value="<%= typeof enfermedad != 'undefined' ?enfermedad : '' %>">
-                         <option value="Seleccione especialidad">Seleccione especialidad</option>
-                         <option value="Cardiología">Cardiología</option>
-                         <option value="Medicina general">Medicina general</option>
-                         <option value="Radiología">Radiología</option>
-                         <option value="Traumatología">Traumatología</option>
-                         <option value="Dermatología">Dermatología</option>
+                        <select id="comboboxEspecialidad" name="especialidad">
+                        <option>Seleccione Especialidad</option>
                         </select>              
                     </td>
                     <td>
-                        <select id="doctores" name="doctores" value="<%= typeof doctores != 'undefined' ? doctores : '' %>" > 
+                        <select name="doctores" value="<%= typeof doctores != 'undefined' ? doctores : '' %>" > 
                         <option>Seleccione doctor</option>
                         </select>
                     </td>
@@ -122,8 +116,12 @@
             </div>
         </div>        
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/cita.js"></script>
 </body>
 </html>
+
 <!-- <a onclick="registrarCita()" class="reserva" href="#">
     Reservar cita
 </a> -->

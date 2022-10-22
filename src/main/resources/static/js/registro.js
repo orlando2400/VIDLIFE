@@ -30,7 +30,7 @@ async function registrarAsegurado() {
         return;
    }
 
-  const request = await fetch('/registrar', {
+  const request = await fetch('api/usuario/registrar', {
      method: 'POST',
      headers: {
        'Accept': 'application/json',
