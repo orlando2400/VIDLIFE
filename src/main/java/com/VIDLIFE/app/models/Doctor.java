@@ -2,10 +2,13 @@ package com.VIDLIFE.app.models;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.LinkedHashSet;
+import java.util.Set;
 import java.util.List;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -22,14 +25,35 @@ public class Doctor {
     @Column(name = "apellidoPaterno",nullable = false)
     private String apellidoPaterno;
     @Column(name = "apellidoMaterno",nullable = false)
-    private String apellidoMaterno;
+    private String apellidoMaterno; 
     @Column(name = "password",nullable = false)
     private String password;
-    @OneToMany(mappedBy = "doctor")
-    private List<Cita> citas;
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Cita>citas = new LinkedHashSet<>();
     @OneToOne
     @JoinColumn(name = "fk_especialidad", nullable = false)
     private Especialidad especialidad;
+    
+
+	public Doctor() {
+		
+	}
+    
+	
+	public Doctor(int id, String nombres, String apellidoPaterno, String apellidoMaterno, String password,
+			Set<Cita> citas, Especialidad especialidad) {
+		super();
+		this.id = id;
+		this.nombres = nombres;
+		this.apellidoPaterno = apellidoPaterno;
+		this.apellidoMaterno = apellidoMaterno;
+		this.password = password;
+		this.citas = citas;
+		this.especialidad = especialidad;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -60,18 +84,26 @@ public class Doctor {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public List<Cita> getCitas() {
+	
+	
+
+	public Set<Cita> getCitas() {
 		return citas;
 	}
-	public void setCitas(List<Cita> citas) {
+
+
+	public void setCitas(Set<Cita> citas) {
 		this.citas = citas;
 	}
+
+
 	public Especialidad getEspecialidad() {
 		return especialidad;
 	}
 	public void setEspecialidad(Especialidad especialidad) {
 		this.especialidad = especialidad;
 	}
+	
     
     
 }

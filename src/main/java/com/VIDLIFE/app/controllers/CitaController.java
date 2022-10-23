@@ -22,12 +22,12 @@ public class CitaController {
     public List<Especialidad>listarEspecialidad(){
     	return citaDao.listarEspecialidad();
     }
-    /*@GetMapping("/listarDoctor")
+    @GetMapping("api/doctores")
     public List<Doctor> listarDoctor() {
-    	return citaService.listarDoctor();
-    }*/
-    @PostMapping("api/cita/registrar")
+    	return citaDao.listarDoctor();
+    }
+    @PostMapping("api/registrarCita")
     public void registrar(@RequestBody Cita cita){
-        citaService.reservar(cita);
+    	citaDao.reservar(cita);
     }
 }

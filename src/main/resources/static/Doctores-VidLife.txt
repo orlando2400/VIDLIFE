@@ -1,0 +1,35 @@
+Cardiologia
+Ramirez Muñoz, Pedro Fernando      31443
+Gomez Perez, Carlos Raúl  25789
+Jimenez Dominguez, Enrique Leonardo 38795
+Casanovas Vargas Luis Alberto      27788  
+Cuiza Vera Teedy Jorge   46565
+
+Dermatologia
+Pacheco Cordova Carla Valeria 64651
+Aparicio Miranda Ingrid Monica 24138
+Oblitas Ferrufino Jorge Alcides 87541
+Soto Sanchez Gustavo Ismael 24871
+Molina Monasterios Monica Cristina 11687
+
+Medicina General
+Maldonado Otero Christian Franck  32568
+Castellanos Rojas Eduardo  24678
+Fernandez Rojas Hector Nicolas  28951
+Urquizo Laos Dante Gonzalo  18624
+Tapia Valle Jessica Nicolle  27731
+
+Radiologia
+Salazar Valda Gabrierla Sandra 78945
+Guzman Orellana Maria Virginia 72658
+Mendoza Espada Pedro Enrique 47862
+Magallanes Sanchez Walter Felix 32278
+Guillen Flores Rosa Martha 52879
+
+Traumatologia
+Zambrano Gonzales Jaime Rodrigo 26641
+Carvajal Gutierrez Ximena Marisol 24008
+Torres Tapia Cecilia  Silvia 52893
+Vargas Arce Maria Antonieta 84165
+Alvarez Fuentes Fernando Eduardo 33975
+ 

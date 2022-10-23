@@ -25,16 +25,18 @@ public class CitaDaoImp implements CitaDao{
     	String query = "FROM Especialidad";
         return entityManager.createQuery(query).getResultList();
 	}
-
+    
+    @Override
+	public List<Doctor> listarDoctor() {
+		String query = "FROM Doctor";
+        return entityManager.createQuery(query).getResultList();
+	}
+    
     public void reservar (Cita cita){
         entityManager.merge(cita);
     }
 
-	@Override
-	public List<Doctor> listarDoctor() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	
 	
 

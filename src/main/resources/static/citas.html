@@ -54,23 +54,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <select id="comboboxEspecialidad" name="especialidad">
-                        <option>Seleccione Especialidad</option>
+                        <select id = "comboBoxEspecialidad" name="especialidad">
+                            <option>Seleccione Especialidad</option>
+                            <option id="optionEspecialidad" value=""></option>
                         </select>              
                     </td>
                     <td>
-                        <select name="doctores" value="<%= typeof doctores != 'undefined' ? doctores : '' %>" > 
-                        <option>Seleccione doctor</option>
+                        <select name="comboBoxDoctores" > 
+                            <option>Seleccione doctor</option>
+                            <option id="optionDoctores" value=""></option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     
-                    <td><input type="date" id="calendario" name="calendario" value="Seleccione fecha" min="2022-10-18" max="2023-10-18" placeholder="yyyy-MM-dd" ></td>
+                    <td><input type="date" id="calendario" name="calendario" value="Seleccione fecha" min="2022-10-18" max="2023-10-18" placeholder="dd-MM-yyyy" ></td>
                     <td>
                         <select id="turno" name="turno"> 
                         <option>Seleccione turno</option>
-                        <option value="Mañana">Mañana</option>
+                         <option value="Mañana">Mañana</option>
                          <option value="Tarde">Tarde</option>
                          <option value="Noche">Noche</option>
                         </select>

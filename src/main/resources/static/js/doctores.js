@@ -1,4 +1,4 @@
-function change(enfermedad, doctores){
+/*function change(enfermedad, doctores){
     enfermedad = document.getElementById(enfermedad);
     doctores = document.getElementById(doctores);
     doctores.value ="";
@@ -44,5 +44,5 @@ function change(enfermedad, doctores){
     doctores.options.add(newOption);
   };    
    
-}
+}*/
 
